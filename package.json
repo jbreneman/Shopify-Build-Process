@@ -1,9 +1,9 @@
 {
-  "name": "potato",
+  "name": "project-name",
   "version": "1.0.0",
-  "description": "potato gulpfile",
-  "homepage": "https://operation-potato-2.myshopify.com/",
-  "repository": "https://bitbucket.org/rocketcodehq/homage",
+  "description": "project-name gulpfile",
+  "homepage": "https://store-name.myshopify.com/",
+  "repository": "https://github.com/jbreneman/Shopify-Build-Process",
   "devDependencies": {
     "autoprefixer": "^7.1.1",
     "babel-plugin-external-helpers": "^6.22.0",
