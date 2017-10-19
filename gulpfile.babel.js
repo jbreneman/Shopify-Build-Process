@@ -78,7 +78,7 @@ function uploadFile(file) {
 	const environment = getEnv(git.branch());
 	argv.upload ? console.log(`Uploading to: ${ environment }`) : '';
 
-	return shell(['theme upload <%= f(file.path) %> -v'], {
+	return shell(['theme upload <%= f(file.path) %> -v --force'], {
 		templateData: {
 			f: function (s) {
 			  return  `--env=${ environment } ${ s.replace(process.cwd() + '/', '') }`;
@@ -105,7 +105,7 @@ function stylesDev() {
 		.pipe(rename(`${ projectName }.min.css`))
 		.pipe(gulp.dest('assets/'))
 		.pipe(size())
-		.pipe(shell(['theme upload <%= f(file.path) %> -v'], {
+		.pipe(shell(['theme upload <%= f(file.path) %> -v --force'], {
 			templateData: {
 				f: function (s) {
 				  return  `--env=${ environment } ${ s.replace(process.cwd() + '/', '') }`;
@@ -181,7 +181,7 @@ function scriptsDev() {
 		.pipe(rename(`${ projectName }.min.js`))
 		.pipe(gulp.dest('assets/'))
 		.pipe(size())
-		.pipe(shell(['theme upload <%= f(file.path) %> -v'], {
+		.pipe(shell(['theme upload <%= f(file.path) %> -v --force'], {
 			templateData: {
 				f: function (s) {
 				  return  `--env=${ environment } ${ s.replace(process.cwd() + '/', '') }`;
@@ -259,7 +259,7 @@ function fileUpload() {
 	gulp.src(watchSrc)
 		.pipe(gulpwatch(watchSrc))
 		.pipe(filter(file => file.event === 'change' || file.event === 'add'))
-		.pipe(shell(['theme upload <%= f(file.path) %> -v'], {
+		.pipe(shell(['theme upload <%= f(file.path) %> -v --force'], {
 			templateData: {
 				f: function (s) {
 				  return  `--env=${ environment } ${ s.replace(process.cwd() + '/', '') }`;
