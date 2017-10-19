@@ -1,0 +1,45 @@
+production:
+  theme_id: THEME_ID_123456
+  password: PRIVATE_APP_PASSWORD
+  store: store-name.myshopify.com
+  concurrency: 4
+  timeout: 60s
+  ignore_files:
+    - "node_modules/*"
+    - "src/*"
+    - "*.html"
+    - .jshintignore
+    - .eslintrc.json
+    - "*.sublime-workspace"
+    - "*.sublime-project"
+    - "package.json"
+staging:
+  theme_id: THEME_ID_123456
+  password: PRIVATE_APP_PASSWORD
+  store: store-name.myshopify.com
+  concurrency: 4
+  timeout: 60s
+  ignore_files:
+    - "node_modules/*"
+    - "src/*"
+    - "*.html"
+    - .jshintignore
+    - .eslintrc.json
+    - "*.sublime-workspace"
+    - "*.sublime-project"
+    - "package.json"
+development:
+  theme_id: THEME_ID_123456
+  password: PRIVATE_APP_PASSWORD
+  store: store-name.myshopify.com
+  concurrency: 4
+  timeout: 60s
+  ignore_files:
+    - "node_modules/*"
+    - "src/*"
+    - "*.html"
+    - .jshintignore
+    - .eslintrc.json
+    - "*.sublime-workspace"
+    - "*.sublime-project"
+    - "package.json"
